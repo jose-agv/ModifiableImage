@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9115947-72f6-4812-9e6f-f6800666b266" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/iteso/image_editing/Format.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/iteso/image_editing/ModifiableImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/iteso/image_editing/TestModifiableImage.java" afterDir="false" />
+    <list default="true" id="e9115947-72f6-4812-9e6f-f6800666b266" name="Changes" comment="ModifiableImage V0.1&#10;Image opening, saving and displaying methods, and grayscale transformation.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iteso/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iteso/image_editing/RGBPixel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iteso/image_editing/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iteso/image_editing/ModifiableImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iteso/image_editing/ModifiableImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iteso/image_editing/TestModifiableImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/iteso/image_editing/TestModifiableImage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,19 +45,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iteso.Main" />
+      <module name="POO_Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iteso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestModifiableImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.iteso.image_editing.TestModifiableImage" />
       <module name="POO_Proyecto" />
@@ -72,8 +84,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestModifiableImage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="POO_Proyecto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iteso.image_editing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iteso.image_editing" />
+      <option name="MAIN_CLASS_NAME" value="com.iteso.image_editing.TestModifiableImage" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestModifiableImage" />
         <item itemvalue="Application.TestModifiableImage" />
       </list>
     </recent_temporary>
@@ -87,11 +116,34 @@
       <option name="presentableId" value="Default" />
       <updated>1683680168694</updated>
       <workItem from="1683680169894" duration="953000" />
-      <workItem from="1684011641376" duration="10978000" />
+      <workItem from="1684011641376" duration="26632000" />
+      <workItem from="1684087701972" duration="7479000" />
     </task>
+    <task id="LOCAL-00001" summary="ModifiableImage V0.1&#10;Image opening, saving and displaying methods, and grayscale transformation.">
+      <created>1684026456935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684026456935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ModifiableImage V0.1&#10;Image opening, saving and displaying methods, and grayscale transformation." />
+    <option name="LAST_COMMIT_MESSAGE" value="ModifiableImage V0.1&#10;Image opening, saving and displaying methods, and grayscale transformation." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
